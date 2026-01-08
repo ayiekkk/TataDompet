@@ -1,7 +1,7 @@
 <footer>
         <div class="social-section">
             <div class="profile-circle">
-                <img src="../public/assets/img/LogoTataDompet-removebg-preview.png" alt="">
+                <img src="../public/assets/img/Logo.png" alt="">
             </div>
             
             <div class="social-icons">
