@@ -1,6 +1,6 @@
 <div class="container-home">
         <div class="left-section">
-            <img src="../public/assets/img/CroodsChart.png" alt="">
+            <img src="front-end/public/assets/img/Logo.png" alt="">
         </div>
         <div class="right-section">
             <h1 class="logo">TATA DOMPET</h1>

@@ -5,7 +5,7 @@
         <ul class="nav-menu">
             <li><a href="../public/index.php" class="nav-link">Beranda</a></li>
             <li><a href="../public/index.php?page=main" class="nav-link">Laporan</a></li>
-            <li><a href="#edukasi" class="nav-link">Edukasi</a></li>
+            <li><a href="../public/index.php?page=edukasi" class="nav-link">Edukasi</a></li>
         </ul>
         <div class="nav-auth">
             <a href="#signin" class="btn-signin">Sign In</a>
