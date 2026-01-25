@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
                     <div class="forgot-password">
-                        <p>Belum punya akun? <a href="register.php">Register</a></p>
+                        <p>Belum punya akun? <a href="index.php?page=register">Register</a></p>
                     </div>
 
                     <button type="submit" class="login-btn">Login</button>

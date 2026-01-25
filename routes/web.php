@@ -16,6 +16,10 @@ if ($page === 'logout') {
     exit;
 }
 
+if ($page === 'register') {
+    require 'pages/register.php';
+    exit;
+}
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: index.php?page=login");
