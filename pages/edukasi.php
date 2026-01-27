@@ -1,3 +1,8 @@
+<?php require_once 'components/header.php'; ?>
+<?php require_once 'components/navbar.php'; ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 

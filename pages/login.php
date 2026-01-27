@@ -1,6 +1,7 @@
 <?php
-session_start();
-require_once '../config/database.php';
+
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../components/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = mysqli_prepare(
@@ -14,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($user && password_verify($_POST['password'], $user['password'])) {
         $_SESSION['user_id'] = $user['id_user'];
-        header('Location: home.php');
+        header('Location: index.php?=main');
         exit;
     }
 
@@ -22,59 +23,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<div class="container-login">
+    <div class="wrapper-login">
+        <div class="left">
+            <img src="../img/TechLifeRemoteLife.png" alt="">
+        </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+        <div class="right">
+            <div class="login-card">
+                <div class="welcome-text">
+                    <h2>Welcome Back</h2>
+                </div>
 
-<body>
-    <div class="container-login">
-        <div class="wrapper-login">
-            <div class="left">
-                <img src="../img/TechLifeRemoteLife.png" alt="">
-            </div>
+                <button class="google-btn">
+                    <span class="material-icon-theme--google"></span>
+                    Log In With Google
+                </button>
 
-            <div class="right">
-                <div class="login-card">
-                    <div class="welcome-text">
-                        <h2>Welcome Back</h2>
+                <form method="POST" action="">
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <span class="tabler--user-filled"></span>
+                            <input name="username" required placeholder="Username">
+                        </div>
                     </div>
 
-                    <button class="google-btn">
-                        <span class="material-icon-theme--google"></span>
-                        Log In With Google
-                    </button>
-
-                    <form method="POST" action="">
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <span class="tabler--user-filled"></span>
-                                <input name="username" required placeholder="Username">
-                            </div>
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <span class="streamline--padlock-square-1-solid"></span>
+                            <input type="password" name="password" required placeholder="Password">
                         </div>
+                    </div>
 
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <span class="streamline--padlock-square-1-solid"></span>
-                                <input type="password" name="password" required placeholder="Password">
-                            </div>
-                        </div>
+                    <div class="forgot-password">
+                        <p>Belum punya akun? <a href="index.php?page=register">Register</a></p>
+                    </div>
 
-                        <div class="forgot-password">
-                            <p>Belum punya akun? <a href="register.php">Register</a></p>
-                        </div>
-
-                        <button type="submit" class="login-btn">Login</button>
-                    </form>
-                </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
             </div>
         </div>
     </div>
-</body>
-
-</html>
+</div>

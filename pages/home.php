@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,20 @@
             <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dicta enim sunt doloremque repellat perferendis.</p>
             <a href="main.php" class="cta-button">Let's Start</a>
         </div>
+=======
+<?php require_once 'components/header.php'; ?>
+<?php require_once 'components/navbar.php'; ?>
+
+<div class="container-home">
+    <div class="left-section">
+        <img src="img/CroodsChart.png" alt="Chart Image">
+>>>>>>> ae52f50ab51fc29695b6759ba997f829d807cc5b
     </div>
-</body>
-</html>
+    <div class="right-section">
+        <h1 class="title">tata dompet</h1>
+        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dicta enim sunt doloremque repellat perferendis.</p>
+        <a href="index.php?page=main" class="cta-button">Let's Start</a>
+    </div>
+</div>
+
+<?php require_once 'components/footer.php'; ?>

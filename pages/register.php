@@ -1,6 +1,7 @@
 <?php
-session_start();
-require_once '../config/database.php';
+
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../components/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
@@ -13,27 +14,52 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_stmt_bind_param($stmt, 'ss', $username, $password);
     mysqli_stmt_execute($stmt);
 
-    header('Location: login.php');
+    header('Location: index.php?=login');
     exit;
 }
 ?>
+<?php require_once 'components/header.php'; ?>
+<div class="container-login">
+    <div class="wrapper-login">
+        <div class="left">
+            <img src="../img/TechLifeRemoteLife.png" alt="">
+        </div>
 
-<!DOCTYPE html>
-<html lang="en">
+        <div class="right">
+            <div class="login-card">
+                <div class="welcome-text">
+                    <h2>Welcome</h2>
+                </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+                <form method="POST" action="">
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <span class="tabler--user-filled"></span>
+                            <input name="username" required placeholder="Username">
+                        </div>
+                    </div>
 
-<body>
-    <form method="POST">
-        <h2>Register</h2>
-        <input name="username" required placeholder="Username">
-        <input type="password" name="password" required placeholder="Password">
-        <button type="submit">Register</button>
-    </form>
-</body>
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <span class="streamline--padlock-square-1-solid"></span>
+                            <input type="password" name="password" required placeholder="Password">
+                        </div>
+                    </div>
 
-</html>
+                    <button type="submit" class="login-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<form method="POST">
+    <h2>Register</h2>
+    <input name="username" required placeholder="Username">
+    <input type="password" name="password" required placeholder="Password">
+    <button type="submit">Register</button>
+</form>
