@@ -12,7 +12,7 @@
             <img src="../img/CroodsChart.png" alt="Chart Image">
         </div>
         <div class="right-section">
-            <h1 class="title">tata dompet</h1>
+            <h1 class="title">Tata Dompet</h1>
             <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dicta enim sunt doloremque repellat perferendis.</p>
             <a href="main.php" class="cta-button">Let's Start</a>
         </div>
