@@ -1,7 +1,9 @@
-<?php require_once 'components/header.php'; ?>
-<?php require_once 'components/navbar.php'; ?>
+<?php
 
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../components/header.php';
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
