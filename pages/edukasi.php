@@ -20,5 +20,7 @@ require_once __DIR__ . '/../components/navbar.php';
         <h2>Edukasi Pengelolaan Keuangan</h2>
     </div>
 
+
+
 </body>
 </html>
