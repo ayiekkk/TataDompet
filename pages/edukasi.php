@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="tes">
-        <p>tes aja</p>
+        <h1>Edukasi Pengelolaan Keuangan</h1>
     </div>
     
 </body>
